@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            fieldset {
+                border: 3px solid black;
+                border-radius: 15px;
+                background-color: red;
+            }
+            button {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+        <h3>
+            Click The Button To Change The Background Color
+        </h3>
+        <button onclick="change()">
+            Click Me
+        </button>
+        </fieldset>
+        <script>
+            function change() {
+                var red = Math.floor(Math.random()*256);
+                var green = Math.floor(Math.random()*256);
+                var blue = Math.floor(Math.random()*256);
+                var bgcolor = "rgb(" + red + "," + green + "," + blue + ")";
+                document.body.style.background = bgcolor;
+            }
+        </script>
+    </body>
+</html>
